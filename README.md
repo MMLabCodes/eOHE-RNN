@@ -60,7 +60,7 @@ python train_model.py --smiles_file QM9_sizes/qm9_selfies_size_1000_index_1.csv 
 
 
 The structure to name the output directories was:
-{Database}_m{Molecular_encoding_index}_size{subset_size}_index_{subset_index}_enc_{encoding_method}
+{Database}_m{Molecular_encoding_index}_size{subset_size}__index_{subset_index}__enc_{encoding_method}
 
 | Keyword                    |  Possible values                                                                            |
 |----------------------------|---------------------------------------------------------------------------------------------|
