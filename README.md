@@ -49,6 +49,26 @@ For the case of SELFIES, it is necessary to add the flag --selfies
 python train_model.py --smiles_file QM9_sizes/qm9_selfies_size_1000_index_1.csv --selfies --embedding_size 0 --reduction_type reduction1 --output_dir QM9_m2_size_1000_index_1_enc_1 --batch_size 128 --sample_size 100000 
 ``` 
 
+| Keyword          |  Status   | Description                                                                           |
+|------------------|-----------|---------------------------------------------------------------------------------------|
+| --smiles_file    | Mandatory | Path to subset that will be used to train model                                       |
+| --embedding_size | Mandatory | Must be `0` in order to use OHE, eOHE-V1 or eOHE-V2                                   |
+| --reduction_type | Mandatory | Choose one: `-reduction0` (OHE), `-reduction1` (eOHE-V1), `-reduction2` (eOHE-V2)     |
+| --output_dir     | Mandatory | Directory to save results of training                                                 |
+| --batch_size     | Mandatory | Our test were performed with batch size of `128`                                      |
+| --sample_size    | Mandatory | Our test were performed with sample size of `100000`                                  |
+
+
+The structure to name the output directories was:
+{Database}_m{Molecular_encoding_index}_size{subset_size}_index_{subset_index}_enc_{encoding_method}
+
+| Keyword                    |  Possible values                                                                            |
+|----------------------------|---------------------------------------------------------------------------------------------|
+| Database                   |  `QM9`, `GDB`, or  `ZINC`                                                                   |
+| Molecular_encoding_index   | `0` for SMILES, `1` for DeepSMILES and `2` for SELFIES                                      |
+| subset_size                | `1000`, `2500`, `5000`, ..., `500000`, check the available sizes in each database directory |
+| subset_index               | `1`, `2`, `3`, ..., `10`                                                                    |
+| encoding_method            | `0` for OHE, `1` for eOHE-V1 and `2` for eOHE-v2                                            |
 
 
 
