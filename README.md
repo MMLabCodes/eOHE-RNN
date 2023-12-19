@@ -46,7 +46,7 @@ python train_model.py --smiles_file QM9_sizes/qm9_deepsmiles_size_1000_index_1.c
 For the case of SELFIES, it is necessary to add the flag --selfies
 
 ```bash
-python train_model.py --smiles_file QM9_sizes/qm9_selfies_size_1000_index_1.csv --embedding_size 0 --reduction_type reduction1 --output_dir QM9_m2_size_1000_index_1_enc_1 --batch_size 128 --sample_size 100000 --selfies
+python train_model.py --smiles_file QM9_sizes/qm9_selfies_size_1000_index_1.csv --selfies --embedding_size 0 --reduction_type reduction1 --output_dir QM9_m2_size_1000_index_1_enc_1 --batch_size 128 --sample_size 100000 
 ``` 
 
 
